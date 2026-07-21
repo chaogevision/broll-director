@@ -1,0 +1,4 @@
+interface:
+  display_name: "专属口播视觉导演 v0.2"
+  short_description: "只输入文案，先动态分析整篇脚本，再输出双锚点剪辑时间轴与素材提示词"
+  default_prompt: "使用 $personal-talking-head-visual-director 分析这篇口播文案。不要套用示例；先判断本篇受众、结构、节奏和视觉密度，再输出估算时间轴、图片提示词、视频提示词和真实录屏清单。"
