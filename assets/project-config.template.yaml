@@ -1,0 +1,33 @@
+project_defaults:
+  source_type: script
+  timecode_mode: estimated
+  platform: vertical-short-video
+  aspect_ratio: "9:16"
+  visual_density: adaptive
+  language: zh-CN
+  default_pace_units_per_second: 4.1
+  duration_error_band: 0.12
+
+creator_profile:
+  stable_domains:
+    - parent-education
+    - ai-tools-and-agents
+    - practical-learning
+  audience_options:
+    - parent-first
+    - ai-user-first
+    - balanced
+  default_a_roll_range: [0.55, 0.75]
+
+creator_overrides:
+  brand_colors: []
+  preferred_fonts: []
+  subtitle_position: bottom-safe-zone
+  preferred_transition: hard-cut-or-soft-push
+  avoid_visuals:
+    - generic-ai-robot
+    - hologram
+    - cyberpunk-city
+    - fake-software-ui
+  reusable_assets: []
+  calibrated_pace_units_per_second: null
