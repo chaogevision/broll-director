@@ -1,0 +1,392 @@
+{
+  "project": {
+    "title": "《推荐Codex》精简示例（v0.2）",
+    "source_file": "推荐Codex.source.txt",
+    "source_type": "script",
+    "timecode_mode": "estimated",
+    "duration_seconds": 110.5,
+    "aspect_ratio": "9:16",
+    "platform": "vertical-short-video",
+    "visual_density": "adaptive-medium",
+    "creator_profile_version": "0.2",
+    "duration_range_seconds": [
+      97.2,
+      123.8
+    ],
+    "skill_version": "0.2"
+  },
+  "strategy": {
+    "one_sentence": "以人物信任为主线，用真实界面证明工具与操作，用案例场景和流程图帮助家长理解三种实践路径。",
+    "a_roll_target_share": 0.62,
+    "global_style": "家长优先、温暖可信、清晰可执行；生活化案例与真实技术证据交替，避免空泛科技氛围。",
+    "visual_principles": [
+      "强观点、亲身判断、Bug态度、价值升华和CTA保留人物",
+      "价格、产品名称、功能、GitHub和运行结果使用真实来源",
+      "三件事先用总览卡建立结构，再为每项选择一个代表性主视觉",
+      "孩子故事使用具体物体、动作和问题，不使用‘天才神童’广告画面",
+      "生成视频只补足难以实拍的情境，不伪造界面、结果和事实"
+    ],
+    "fact_check_notes": [
+      "时间码基于文案估算，成片后必须重对齐",
+      "发布前核实ChatGPT Plus价格、产品名称与当前界面",
+      "脚本中的workbody疑似WorkBuddy，需确认",
+      "‘顶级’与‘不可限量’属于观点性表达，不制作成客观数据卡"
+    ],
+    "visual_change_pattern": "前30秒围绕观点、价格和替代方案形成3次有效变化；中段每个方法使用一个主视觉系统；结尾逐步降低外部素材密度并回到人物。"
+  },
+  "segments": [
+    {
+      "id": "S01",
+      "start": "00:00.000",
+      "end": "00:14.000",
+      "timecode_confidence": "estimated",
+      "line_range": "1-4",
+      "anchor_text": "这个暑假最值得小朋友学习的AI，一定是像Codex这样的agent工具。",
+      "role": "hook",
+      "priority": "must",
+      "visual_decision": "a-roll-punch-in",
+      "screen_mode": "A-roll主画面 + 右上角25%真实界面画中画",
+      "visual_goal": "先建立说话者可信度，再让观众立刻知道Codex是一种可以真实操作的Agent工具。",
+      "reason": "强观点的第一句话应该看到人物；产品名出现后再用真实界面消除抽象感。",
+      "use_seconds": 5.0,
+      "source_route": "real-ui",
+      "brief": "前1.5秒保留人物中近景并缓慢推近；说到‘Codex’时，右上角弹出真实Codex新任务界面2.5–3秒；不要用机器人或蓝色全息屏。",
+      "screen_capture": {
+        "title": "录制Codex新任务/工作区界面",
+        "steps": [
+          "打开干净的新任务页面，等待界面稳定1秒",
+          "鼠标移动到输入框，输入一个简短的孩子项目需求但暂不发送",
+          "停留2秒展示任务入口与工作区"
+        ],
+        "target_seconds": 5,
+        "privacy": [
+          "隐藏账号头像、邮箱和历史任务",
+          "不要露出API Key或本地私人路径"
+        ],
+        "fallback": "使用官方公开界面截图；不可生成伪造界面"
+      },
+      "overlay": {
+        "text": "这个暑假，孩子最值得接触的 AI：Agent",
+        "style": "两行大字，关键词Agent使用强调色；上方安全区"
+      },
+      "edit": {
+        "in": "视频开头直接人物画面",
+        "out": "‘它到底能够干什么’前回到全屏人物",
+        "transition": "画中画轻推入，切回时淡出6帧",
+        "motion": "A-roll 100%→106%慢推",
+        "audio": "保留原口播，可在Codex画中画出现时加轻微确认音",
+        "subtitle": "字幕保持底部，不与右上角画中画冲突"
+      },
+      "fact_check": [
+        "发布前确认Codex当前界面与入口名称"
+      ],
+      "rights_privacy": [
+        "使用本人合法账号录屏并遮挡个人信息"
+      ],
+      "filename": "S01_000000-000014_REALUI_codex-new-task.mp4",
+      "sentence_range": "L1-L4",
+      "start_anchor": "这个暑假最值得小朋友学习的AI",
+      "end_anchor": "烈建议大家一定要去使用一下Codex",
+      "spoken_text": "这个暑假最值得小朋友学习的AI\n一定是像Codex这样的agent工具\n如果你家庭有条件的话\n强烈建议大家一定要去使用一下Codex",
+      "rhythm_level": "high",
+      "visual_necessity": 46,
+      "decision_confidence": "high",
+      "secondary_treatment": "产品名出现时短暂加入真实界面画中画",
+      "generation_action": "capture-real",
+      "estimated_spoken_seconds": 14.0
+    },
+    {
+      "id": "S02",
+      "start": "00:14.000",
+      "end": "00:36.000",
+      "timecode_confidence": "estimated",
+      "line_range": "5-12",
+      "anchor_text": "就是ChatGPT的Plus会员，每个月20美金……也就是可能一顿火锅的钱。",
+      "role": "data",
+      "priority": "must",
+      "visual_decision": "data-card",
+      "screen_mode": "左侧人物40% + 右侧数据卡60%",
+      "visual_goal": "把价格和生活化类比一次讲清，降低家长的成本顾虑。",
+      "reason": "数字靠听觉不容易记；价格属于需核实事实，适合真实价格来源加自制数据卡。",
+      "use_seconds": 8.0,
+      "source_route": "graphic+real-ui",
+      "brief": "先展示官方Plus价格截图的局部，再转为干净数据卡‘US$20/月’；说到火锅时在卡片底部出现一张温暖的火锅俯拍画中画。人民币换算不要写死，除非制作当天核实。",
+      "image_prompt": {
+        "zh": "用途：数据卡中的小尺寸生活化画中画。俯拍一桌适合三四人分享的中式火锅，食材整齐、热气自然、暖色餐厅光线，画面干净但不过度商业广告感，右侧和上方留出裁切空间。4:3，高细节真实摄影。禁止任何文字、价格、Logo、水印、人物面孔、夸张蒸汽、畸形餐具。",
+        "en": "A realistic overhead editorial photograph of a Chinese hot pot meal for three to four people, neatly arranged ingredients, subtle natural steam, warm restaurant lighting, authentic and approachable rather than luxury advertising, clean composition with cropping room on the top and right, 4:3. No text, price labels, logos, watermarks, faces, distorted utensils or excessive steam.",
+        "aspect_ratio": "4:3",
+        "negative": "文字、Logo、水印、人物脸、夸张蒸汽、畸形餐具"
+      },
+      "screen_capture": {
+        "title": "保存ChatGPT Plus官方价格页面局部",
+        "steps": [
+          "打开官方定价/帮助页面",
+          "定位Plus月费并只保留必要区域",
+          "截取或录制2秒静止画面供数据卡引用"
+        ],
+        "target_seconds": 3,
+        "privacy": [
+          "不展示登录账号、支付信息或地区账单数据"
+        ],
+        "fallback": "只做文字数据卡并在制作备注附官方来源"
+      },
+      "overlay": {
+        "text": "US$20 / 月 ≈ 一顿火锅的预算",
+        "style": "主数字最大；‘一顿火锅’作为类比而非精确换算"
+      },
+      "edit": {
+        "in": "说到‘每个月20美金’时卡片从右侧进入",
+        "out": "说到‘但是你可以真正地……’时卡片收起",
+        "transition": "硬切到价格局部，再用遮罩展开数据卡",
+        "motion": "主数字轻微计数出现；火锅图不做夸张缩放",
+        "audio": "数字出现加一次轻微点击音",
+        "subtitle": "底部字幕避免与卡片脚注重叠"
+      },
+      "fact_check": [
+        "制作当天核实Plus月费",
+        "核实人民币换算；无法核实时不显示‘300多’",
+        "‘一顿火锅’是修辞类比，不作为价格事实"
+      ],
+      "rights_privacy": [
+        "价格页面使用官方公开来源；火锅图需自有、授权或生成"
+      ],
+      "filename": "S02_000014-000036_GRAPHIC_plus-price-hotpot.png",
+      "sentence_range": "L5-L12",
+      "start_anchor": "你可以使用最低档的啊Codex",
+      "end_anchor": "也就是可能一顿火锅的钱",
+      "spoken_text": "你可以使用最低档的啊Codex\n就是chatgpt的plus会员\n每个月20美金\n有条件的朋友推荐你一定要去用一下\n那我们使用并不是说他花了多少钱\n20美金两个月\n其实也就300多块钱\n也就是可能一顿火锅的钱",
+      "rhythm_level": "high",
+      "visual_necessity": 94,
+      "decision_confidence": "high",
+      "secondary_treatment": "左侧保留人物，右侧价格卡与生活化类比",
+      "generation_action": "build-graphic",
+      "estimated_spoken_seconds": 22.0
+    },
+    {
+      "id": "S06",
+      "start": "00:36.000",
+      "end": "01:08.000",
+      "timecode_confidence": "estimated",
+      "line_range": "29-39",
+      "anchor_text": "我侄子最近非常喜欢打羽毛球……好的羽毛球拍，它的韧性为什么那么强？",
+      "role": "example",
+      "priority": "must",
+      "visual_decision": "full-broll-video",
+      "screen_mode": "全屏B-roll + 提问文字卡",
+      "visual_goal": "把第一件事的核心——从孩子真实兴趣出发——变成一个可看、可感知的问题。",
+      "reason": "羽毛球拍是具体物体，孩子观察与提问有明确动作，适合短B-roll。",
+      "use_seconds": 8.0,
+      "source_route": "generated-video-or-user-footage",
+      "brief": "建议拆为两条素材：A孩子在球馆打球或捡球；B孩子在安静处按压/观察球拍线床。成片使用A约2秒、B约4秒，提问文字在B上出现。",
+      "video_prompt": {
+        "zh": "生成一段7秒、9:16竖屏、自然写实的教育探索B-roll，剪辑实际取用约4秒。室内羽毛球馆边缘，一个约10岁的虚构中国孩子坐在长凳旁，手持一支普通羽毛球拍，用手指轻轻按压线床并从不同角度观察回弹，神情专注好奇。镜头从球拍线床的微距特写开始，稳定缓慢拉到孩子侧脸与手部的中近景，最后停在回弹的拍线和孩子观察的眼神之间。场馆背景柔和虚化，真实体育馆光线，材质与手部准确。禁止文字、品牌Logo、水印、专业运动员广告姿态、机器人、全息投影、畸形手指、球拍结构错误、突然换脸、快速抖动。",
+        "en": "Create a 7-second, 9:16 vertical, naturalistic educational exploration clip; use about 4 seconds in the edit. At the edge of an indoor badminton court, a fictional Chinese child around age ten sits by a bench holding an ordinary badminton racket, gently presses the string bed with one finger and studies how it rebounds from different angles. Begin with a macro close-up of the strings, make a slow stable pull-back to a medium close shot of the child's profile and hands, and end between the rebounding strings and the child's curious eyes. Softly blurred sports hall background, realistic indoor lighting, accurate materials and anatomy. No text, brand logos, watermarks, athlete-advertising poses, robots, holograms, malformed fingers, incorrect racket construction, face changes or shaky motion.",
+        "generate_seconds": 7,
+        "use_range": "00:01.5-00:05.5",
+        "aspect_ratio": "9:16",
+        "negative": "文字、Logo、机器人、球拍结构错误、畸形手、换脸、抖动"
+      },
+      "stock_search": {
+        "zh": [
+          "孩子观察羽毛球拍线床",
+          "羽毛球拍线回弹特写",
+          "儿童羽毛球训练 好奇"
+        ],
+        "en": [
+          "child inspecting badminton racket strings close up",
+          "badminton racket string bed rebound macro",
+          "curious child badminton training"
+        ],
+        "exclude": [
+          "professional athlete",
+          "robot",
+          "hologram"
+        ]
+      },
+      "overlay": {
+        "text": "为什么好的羽毛球拍，韧性更强？",
+        "style": "问题在球拍特写稳定后出现；两行，左上留白区"
+      },
+      "edit": {
+        "in": "‘喜欢打羽毛球’时先切运动动作",
+        "out": "‘我们把小朋友感兴趣的事物’前切回人物或流程图",
+        "transition": "动作匹配硬切",
+        "motion": "不要额外加速；球拍特写可轻微速度80%",
+        "audio": "可保留一声轻微击球环境声，低于口播",
+        "subtitle": "提问卡与底部字幕分区"
+      },
+      "fact_check": [
+        "不要在画面中暗示特定品牌球拍性能"
+      ],
+      "rights_privacy": [
+        "虚构儿童或取得监护人授权；球馆素材需许可"
+      ],
+      "filename": "S06_000036-000108_GENVID_child-racket-question.mp4",
+      "sentence_range": "L29-L39",
+      "start_anchor": "那首先第一件事情是啊我们可以使用",
+      "end_anchor": "他就想去探究一下这个事情",
+      "spoken_text": "那首先第一件事情是啊我们可以使用\n这个agent工具去帮小朋友\n把他自己感兴趣的事物\n或者这个暑假他非常\n感兴趣的一个话题\n就比如说前几天我跟我侄子聊天\n他啊最近是非常喜欢打羽毛球\n他提出了一个想法就是说\n哎这个好的羽毛球拍\n就是它的韧性为什么那么强\n他就想去探究一下这个事情",
+      "rhythm_level": "medium",
+      "visual_necessity": 80,
+      "decision_confidence": "medium",
+      "secondary_treatment": "问题句叠加一行大字，物体特写优先",
+      "generation_action": "video-prompt-only",
+      "estimated_spoken_seconds": 32.0
+    },
+    {
+      "id": "S08",
+      "start": "01:08.000",
+      "end": "01:50.500",
+      "timecode_confidence": "estimated",
+      "line_range": "45-60",
+      "anchor_text": "去找一个开源的项目……在GitHub上找到，让agent在本地安装起来，最后运行起来。",
+      "role": "process",
+      "priority": "must",
+      "visual_decision": "screen-recording",
+      "screen_mode": "全屏真实录屏，关键步骤局部放大",
+      "visual_goal": "把‘找开源项目—安装—运行’从概念变成观众能模仿的具体路径。",
+      "reason": "软件流程必须看真实动作；泛化代码素材无法证明可操作性。",
+      "use_seconds": 14.0,
+      "source_route": "screen-recording",
+      "brief": "建议四段真实录屏：GitHub搜索小游戏/数学可视化项目；打开README；把仓库交给Agent并运行安装命令；浏览器或本地应用成功打开。每段2–4秒，用步骤编号串联。",
+      "screen_capture": {
+        "title": "录制GitHub开源项目从搜索到运行",
+        "steps": [
+          "准备一个许可证清楚、依赖简单、可在本地成功运行的示例项目",
+          "在GitHub搜索框输入具体关键词并打开项目主页",
+          "快速展示README中的运行说明与许可证",
+          "在Agent中引用仓库并下达‘按README安装并运行’的明确任务",
+          "录制终端安装的关键进度，不展示冗长等待",
+          "录制浏览器/应用成功运行的最终效果至少2秒"
+        ],
+        "target_seconds": 14,
+        "privacy": [
+          "隐藏GitHub用户名、邮箱、Token、SSH地址和私人仓库",
+          "隐藏本地用户名与绝对路径",
+          "清除终端历史中的密钥"
+        ],
+        "fallback": "使用一个离线准备好的最小开源示例；不要生成假GitHub或假终端"
+      },
+      "overlay": {
+        "text": "① 找项目 ② 看README ③ Agent安装 ④ 本地运行",
+        "style": "顶部步骤条，当前步骤高亮"
+      },
+      "edit": {
+        "in": "‘开源的项目’时切GitHub搜索",
+        "out": "运行结果出现并停留1.5秒后回到人物",
+        "transition": "步骤间硬切；同一录屏内不加花哨转场",
+        "motion": "关键按钮/命令局部放大115%并跟随鼠标",
+        "audio": "保留口播；成功运行时可加轻确认音",
+        "subtitle": "终端命令区域与字幕错开"
+      },
+      "fact_check": [
+        "确认项目许可证允许展示/使用",
+        "提前实测安装成功",
+        "项目名称和运行命令按当前版本记录"
+      ],
+      "rights_privacy": [
+        "遵守项目许可证；录屏处理账号与路径隐私"
+      ],
+      "filename": "S08_000108-000150_SCREEN_github-agent-local-run.mp4",
+      "sentence_range": "L45-L60",
+      "start_anchor": "那推荐去做的第二件事情",
+      "end_anchor": "我们看一看效果",
+      "spoken_text": "那推荐去做的第二件事情\n就是让小朋友可以使用agent\n工具去找一个开源的项目\n那如果你还不知道开源项目的话\n你可以去跟任意的AI去\n聊聊什么是开源项目\n去找到一个小朋友\n可能感兴趣的一个领域\n它可能可以是一个啊小游戏\n或者是说一个啊数学\n的可视化的一个项目\n啊等等的都可以去找到\n像Git Hub上面的一个开源项目\n让agent工具在本地安装起来\n最后运行起来\n我们看一看效果",
+      "rhythm_level": "medium",
+      "visual_necessity": 98,
+      "decision_confidence": "high",
+      "secondary_treatment": "录屏局部放大并用简短步骤标签",
+      "generation_action": "capture-real",
+      "estimated_spoken_seconds": 42.5
+    }
+  ],
+  "script_analysis": {
+    "core_thesis": "家长可以让孩子把 Agent 当作实践伙伴，从兴趣问题、开源项目和自制小工具开始，建立把想法变成真实作品的能力。",
+    "content_archetypes": [
+      "tool-recommendation",
+      "method-list",
+      "case-study"
+    ],
+    "audience_focus": "parent-first",
+    "viewer_questions": [
+      "普通家庭是否有条件让孩子接触 Agent，成本和替代方案是什么？",
+      "家长刚开始时，可以具体带孩子做哪三类事情？",
+      "孩子不懂编程、作品有 Bug，是否仍然值得做？",
+      "这种实践最终能给孩子带来什么长期能力？"
+    ],
+    "structure": [
+      {
+        "phase": "强观点与推荐",
+        "locator": "L1-L4",
+        "goal": "建立主题和行动紧迫感"
+      },
+      {
+        "phase": "成本与替代方案",
+        "locator": "L5-L23",
+        "goal": "处理家庭门槛和工具选择顾虑"
+      },
+      {
+        "phase": "三种实践方法总览",
+        "locator": "L24-L28",
+        "goal": "建立后续清单结构"
+      },
+      {
+        "phase": "方法一：兴趣问题做项目",
+        "locator": "L29-L44",
+        "goal": "用羽毛球拍案例解释PBL路径"
+      },
+      {
+        "phase": "方法二：跑通开源项目",
+        "locator": "L45-L60",
+        "goal": "把抽象开源概念变成真实操作"
+      },
+      {
+        "phase": "方法三：做自己的小工具",
+        "locator": "L61-L76",
+        "goal": "展示需求表达、制作与Bug"
+      },
+      {
+        "phase": "价值升华与行动号召",
+        "locator": "L77-L93",
+        "goal": "从作品上升到创造力和未来可能性"
+      }
+    ],
+    "emotional_curve": [
+      "好奇",
+      "成本顾虑",
+      "释然",
+      "理解",
+      "可信",
+      "受鼓舞",
+      "行动意愿"
+    ],
+    "information_density": "high",
+    "abstraction_level": "medium",
+    "proof_requirement": "high",
+    "actionability": "high",
+    "story_strength": "medium",
+    "freshness_risk": "high",
+    "speech_pace": {
+      "mode": "standard-explanatory",
+      "units_per_second": 4.1,
+      "reason": "文案口语词较多，包含产品名、数字、三段方法与情绪升华，适合中速解释而非高速信息轰炸。",
+      "calculation": "weighted Chinese speaking units; all timecodes are estimates"
+    },
+    "visual_plan_summary": "本篇是家长优先的工具推荐与三步方法清单：开头和价值判断保留人物，价格与产品用真实来源，三种方法分别使用案例场景、流程图和真实录屏，结尾回到人物完成信任与行动号召。",
+    "key_visual_anchors": [
+      "Plus价格与‘一顿火锅’成本类比",
+      "孩子围绕羽毛球拍提出问题",
+      "PBL从问题到项目的流程",
+      "GitHub项目被Agent安装并运行",
+      "从兴趣需求到小工具成品",
+      "Bug与修复过程"
+    ],
+    "keep_face_moments": [
+      "开头‘这个暑假最值得学习的AI’强判断",
+      "说明自己真实使用过替代工具",
+      "‘没有关系’对Bug的态度",
+      "把想法做成工具后的价值感受",
+      "最后‘真的可以去用起来’行动号召"
+    ]
+  }
+}
